@@ -1,0 +1,50 @@
+:root {
+  --primary: #b7472a;
+  --primary-dark: #8f3720;
+  --bg: #fffaf7;
+  --text: #2a1f1a;
+  --muted: #6b5b52;
+  --card: #ffffff;
+  --whatsapp: #25d366;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: var(--text); background: var(--bg); }
+
+.container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+.navbar { position: sticky; top: 0; background: rgba(255,250,247,.95); backdrop-filter: blur(6px); z-index: 10; border-bottom: 1px solid #f0e2da; }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; }
+.brand { font-weight: 700; font-size: 20px; color: var(--primary-dark); }
+nav a { margin-left: 20px; text-decoration: none; color: var(--text); font-size: 14px; }
+.nav-cta { background: var(--primary); color: white; padding: 8px 14px; border-radius: 20px; }
+
+.hero { padding: 70px 0; }
+.hero-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
+.hero h1 { font-size: 38px; line-height: 1.2; margin-bottom: 16px; color: var(--primary-dark); }
+.hero p { color: var(--muted); margin-bottom: 24px; font-size: 16px; }
+.hero-image { height: 280px; border-radius: 20px; background: linear-gradient(135deg, var(--primary), #f2a65a); }
+
+.btn { display: inline-block; padding: 12px 22px; border-radius: 30px; text-decoration: none; font-weight: 600; }
+.btn-whatsapp { background: var(--whatsapp); color: white; }
+
+.section { padding: 60px 0; }
+.section.alt { background: #fff2ea; }
+.section h2 { font-size: 26px; margin-bottom: 20px; color: var(--primary-dark); }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+.card { background: var(--card); border-radius: 14px; padding: 22px; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+.card h3 { margin-top: 0; color: var(--primary-dark); }
+.card p { color: var(--muted); font-size: 14px; }
+
+.cta-final { text-align: center; }
+.cta-final p { color: var(--muted); margin-bottom: 20px; }
+
+.footer { padding: 24px 0; text-align: center; color: var(--muted); font-size: 13px; }
+
+@media (max-width: 720px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  nav a { margin-left: 12px; font-size: 13px; }
+}
+
